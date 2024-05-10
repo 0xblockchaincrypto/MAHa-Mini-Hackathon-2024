@@ -11,8 +11,8 @@ const config = {
 const alchemy = new Alchemy(config);
 
 // Function to get NFTs for a specified owner
-async function getNFTsForOwner(owner) {
-    const endpoint = `https://eth-mainnet.g.alchemy.com/nft/v3/${process.env.ALCHEMY}/getNFTsForOwner?owner=${owner}&pageSize=10`;
+async function getNFTsForOwner(account_address) {
+    const endpoint = `https://eth-mainnet.g.alchemy.com/nft/v3/${process.env.ALCHEMY}/getNFTsForOwner?owner=${account_address}&pageSize=10`;
     console.log(endpoint);
     const options = {
         method: 'GET',
@@ -42,9 +42,9 @@ async function getNFTsForOwner(owner) {
 }
 
 // Function to get non-zero ERC20 token balances
-async function getERC20Balance(userAddress) {
+async function getERC20Balance(account_address) {
     try {
-        const balances = await alchemy.core.getTokenBalances(userAddress);
+        const balances = await alchemy.core.getTokenBalances(account_address);
         const nonZeroBalances = balances.tokenBalances.filter(token => token.tokenBalance !== "0");
 
         let results = nonZeroBalances.map(async (token) => {
@@ -72,10 +72,10 @@ async function generateWallet() {
 }
 
 // Function to fetch contract source code
-async function fetchContractSourceCode(contractAddress) {
+async function fetchContractSourceCode(account_address) {
     try {
         const apiKey = process.env.ETHERSCAN_API_KEY;
-        const url = `https://api.etherscan.io/api?module=contract&action=getsourcecode&address=${contractAddress}&apikey=${apiKey}`;
+        const url = `https://api.etherscan.io/api?module=contract&action=getsourcecode&address=${account_address}&apikey=${apiKey}`;
         const response = await fetch(url);
 
         if (!response.ok) {

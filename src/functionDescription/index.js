@@ -6,12 +6,12 @@ const functionDescriptions = [
       parameters: {
         type: "object",
         properties: {
-          owner: {
+          account_address: {
             type: "string",
             description: "Ethereum address of the NFT owner."
           },
         },
-        required: ["owner"],
+        required: ["account_address"],
       },
     },
     {
@@ -21,12 +21,12 @@ const functionDescriptions = [
       parameters: {
         type: "object",
         properties: {
-          userAddress: {
+            account_address: {
             type: "string",
             description: "Ethereum address of the user."
           },
         },
-        required: ["userAddress"],
+        required: ["account_address"],
       },
     },
     {
@@ -46,12 +46,12 @@ const functionDescriptions = [
       parameters: {
         type: "object",
         properties: {
-          contractAddress: {
+            account_address: {
             type: "string",
             description: "Ethereum address of the smart contract whose source code is to be retrieved."
           },
         },
-        required: ["contractAddress"],
+        required: ["account_address"],
       },
     }
   ];

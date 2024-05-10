@@ -26,6 +26,7 @@ async function callGPTFunctions(messages, functions) {
 async function analyseQuery(message) {
   let gptMessageHistory = [];
   let systemMessage = { role: "system", content: 'You are a Telegram bot, specialized in the field of Blockchain technology. Your primary task is to promptly respond to user inquiries in a highly professional manner'};
+
   let userMessage = { role: "user", content: message };
   gptMessageHistory.push(userMessage);
   let response = await callGPTFunctions(
@@ -57,7 +58,7 @@ async function analyseQuery(message) {
       const functionName = responseMessage.function_call.name;
       const functionToCall = availableFunctions[functionName];
       const functionArgs = JSON.parse(responseMessage.function_call.arguments);
-      const functionResponse = await functionToCall(functionArgs.id);
+      const functionResponse = await functionToCall(functionArgs.account_address);
       console.log("functionResponse", functionResponse);
 
       
@@ -86,11 +87,13 @@ async function analyseQuery(message) {
 }
 
 
-analyseQuery('provide me the list of NFTs this wallet holds 0xcB034160f7B45E41E6015ECEA09F31A66C144422')
-    .then(sourceCode => {
-        if (sourceCode) {
-            console.log('Contract Source Code:', sourceCode);
-        } else {
-            console.log('No source code found or error occurred');
-        }
-    });
+// analyseQuery('explain the contract present at 0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413 in short description')
+//     .then(sourceCode => {
+//         if (sourceCode) {
+//             console.log('Contract Source Code:', sourceCode);
+//         } else {
+//             console.log('No source code found or error occurred');
+//         }
+//     });
+
+module.exports = analyseQuery
