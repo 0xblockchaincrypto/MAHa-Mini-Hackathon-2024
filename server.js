@@ -11,7 +11,7 @@ app.post('/message', async (req, res) => {
   try {
     console.log(req.body.text);  // Assuming the text is in the 'text' field of the request body
     let responseText = await analyseQuery(req.body.text);
-    res.send(responseText);  // Simple response to acknowledge receipt
+    res.send({responseText});  // Simple response to acknowledge receipt
   } catch(error){
     console.error(error); // Log the error
     res.status(500).send('An error occurred');
