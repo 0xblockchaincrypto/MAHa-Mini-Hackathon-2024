@@ -7,20 +7,19 @@ Access the Blockchain Assistant Bot directly on Telegram: [t.me/block_query_bot]
 The Blockchain Assistant Bot is a unique Telegram bot tailored for interacting with blockchain technologies through natural and intuitive language. It acts both as a conversational companion and an essential toolkit designed for effective management of common blockchain operations. 
 
 ## Sample Conversation
-### ask questions about any Smart Contract. just provide the address and it will fetch the contract and answer your query.
-<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/7cc2927b-91f6-49f1-92e7-c62699005b66" width="500" height="300">
+### Ask questions about any Smart Contract. Just provide the address and it will fetch the contract and answer your query.
+<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/7cc2927b-91f6-49f1-92e7-c62699005b66" width="360" height="202">
 
-<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/c3ada771-1c6b-46a7-8f29-73155aeaa592" width="500" height="300">
-
+<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/c3ada771-1c6b-46a7-8f29-73155aeaa592" width="360" height="202">
 
 ### Utility functions like Generating New Accounts, Unit conversion, Unix Time stamp
-<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/a9882e05-6544-46d7-8230-0a7f9c622e4b" width="500" height="300">
+<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/a9882e05-6544-46d7-8230-0a7f9c622e4b" width="360" height="202">
 
-<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/206de0f5-76a5-41f9-8fdc-cfceb7cb32be" width="500" height="300">
-
+<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/206de0f5-76a5-41f9-8fdc-cfceb7cb32be" width="360" height="202">
 
 ### Ask about the balances of NFT and ERC20s
-<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/0af88c11-1e8e-460f-9697-8f5be53cf1dc" width="500" height="300">
+<img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/0af88c11-1e8e-460f-9697-8f5be53cf1dc" width="360" height="202">
+
 
 
 ## Features
