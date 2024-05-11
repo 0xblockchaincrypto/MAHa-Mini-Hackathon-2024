@@ -1,10 +1,23 @@
-# BLOCK QUERY: Blockchain Assistant Bot for Telegram
+# BLOCK QUERY: LLM Powered Blockchain Assistant Bot for Telegram
 
 ## Bot URL
 Access the Blockchain Assistant Bot directly on Telegram: [t.me/block_query_bot](https://t.me/block_query_bot)
 
 ## Overview
 The Blockchain Assistant Bot is a unique Telegram bot tailored for interacting with blockchain technologies through natural and intuitive language. It acts both as a conversational companion and an essential toolkit designed for effective management of common blockchain operations. 
+
+## Sample Conversation
+### ask questions about any Smart Contract. just provide the address and it will fetch the contract and answer your query.
+![summmarise con 1](https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/7cc2927b-91f6-49f1-92e7-c62699005b66)
+![summarise con 2](https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/c3ada771-1c6b-46a7-8f29-73155aeaa592)
+
+### Utility functions like Generating New Accounts, Unit conversion, Unix Time stamp
+![eth address](https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/a9882e05-6544-46d7-8230-0a7f9c622e4b)
+![utility](https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/206de0f5-76a5-41f9-8fdc-cfceb7cb32be)
+
+
+### Ask about the balances of NFT and ERC20s
+![erc20](https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/0af88c11-1e8e-460f-9697-8f5be53cf1dc)
 
 ## Features
 
