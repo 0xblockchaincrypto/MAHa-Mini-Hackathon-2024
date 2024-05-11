@@ -25,26 +25,26 @@ async function callGPTFunctions(messages, functions) {
 
 async function analyseQuery(message) {
   let gptMessageHistory = [];
-  let systemMessage = { role: "system", content: 'You are a Telegram bot, specialized in the field of Blockchain technology. Your primary task is to promptly respond to user inquiries in a highly professional manner'};
-
+  let systemMessage = {
+    role: "system",
+    content:
+      "You are a Telegram bot, specialized in the field of Blockchain technology. Your primary task is to promptly respond to user inquiries in a highly professional manner",
+  };
+  gptMessageHistory.push(systemMessage);
   let userMessage = { role: "user", content: message };
   gptMessageHistory.push(userMessage);
   let response = await callGPTFunctions(
     gptMessageHistory,
     functionDescriptions
   );
-
   if (!response.ok) {
     // if the request was not successful, parse the error
     const error = await response.json();
-
     // log the error for debugging purposes
     console.error("OpenAI API Error:", error);
-
     // return an error response to the client
     return { status: "error", data: error.message };
   }
-
   let data = await response.json();
   if (data?.choices?.length > 0) {
     const responseMessage = data?.choices[0]?.message;
@@ -54,38 +54,45 @@ async function analyseQuery(message) {
         responseMessage.function_call.name,
         responseMessage.function_call.arguments
       );
-
       const functionName = responseMessage.function_call.name;
       const functionToCall = availableFunctions[functionName];
       const functionArgs = JSON.parse(responseMessage.function_call.arguments);
-      const functionResponse = await functionToCall(functionArgs.account_address);
+      let functionResponse;
+      if (functionName == "weiToEther") {
+        functionResponse = await functionToCall(functionArgs.wei);
+      } else {
+        if (functionName == "etherToWei") {
+            console.log('======>',functionArgs, functionArgs.ether);
+          functionResponse = await functionToCall(functionArgs.ether);
+        } else {
+          functionResponse = await functionToCall(functionArgs.account_address);
+        }
+      }
+
       console.log("functionResponse", functionResponse);
 
-      
       gptMessageHistory.push(responseMessage);
       console.log("Ppppppppppppppppppppppp +++++++++>>>", responseMessage);
-      
       gptMessageHistory.push({
         role: "function",
         name: functionName,
         content: JSON.stringify(functionResponse),
       });
-      
       response = await callGPTFunctions(
         gptMessageHistory,
         functionDescriptions
       );
-    //   console.log('response',response);
+      //   console.log('response',response);
       // response = await callGPTFunctions(global[_id].messages, functions);
       data = await response.json();
-
       const botAnswer = data?.choices?.[0]?.message?.content;
-
-      return botAnswer
+      return botAnswer;
+    } else {
+      const botAnswer = data?.choices?.[0]?.message?.content;
+      return botAnswer;
     }
   }
 }
-
 
 // analyseQuery('explain the contract present at 0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413 in short description')
 //     .then(sourceCode => {
@@ -96,4 +103,4 @@ async function analyseQuery(message) {
 //         }
 //     });
 
-module.exports = analyseQuery
+module.exports = analyseQuery;
