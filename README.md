@@ -8,11 +8,6 @@ The Blockchain Assistant Bot is a unique Telegram bot tailored for interacting w
 
 ## Features
 
-## Conversational Examples
-- **Generating Ethereum Addresses**: A user might say, "I need a new Ethereum wallet," and the bot will respond with a newly generated wallet address and private key.
-- **Fetching Token Data**: When a user asks, "What tokens does this wallet hold?", the bot will list all the ERC20 tokens along with their quantities for the given address.
-- **Smart Contract Queries**: Users can request the source code of a contract by asking, "Can you show me the code for this contract address?"
-
 ### Conversational Interaction
 Users can chat with the bot using plain English, without needing to remember specific commands or syntax. Whether asking for blockchain-related data or seeking help with Ethereum transactions, the user simply types a request as if speaking to another person.
 
@@ -26,6 +21,12 @@ Gain instant access to specific blockchain data directly through conversation:
 - **NFT Ownership**: Identify which NFTs are held by a particular Ethereum wallet.
 - **ERC20 Token Balances**: Check the balance of ERC20 tokens in any specified wallet.
 - **Smart Contract Code**: Retrieve and display the source code of any smart contract through its Ethereum address.
+
+
+## Conversational Examples
+- **Generating Ethereum Addresses**: A user might say, "I need a new Ethereum wallet," and the bot will respond with a newly generated wallet address and private key.
+- **Fetching Token Data**: When a user asks, "What tokens does this wallet hold?", the bot will list all the ERC20 tokens along with their quantities for the given address.
+- **Smart Contract Queries**: Users can request the source code of a contract by asking, "Can you show me the code for this contract address?"
 
 
 
