@@ -28,7 +28,7 @@ app.get('/test', (req, res) => {
 });
 
 app.listen(8888, () => {
-  console.log(`App listening at http://localhost:${8888}`);
+  console.log(`App listening at http://localhost:${8888}`);    
 });
 
 // Generic error handling middleware for unmatched routes or server errors
