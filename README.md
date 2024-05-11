@@ -20,6 +20,7 @@ The Blockchain Assistant Bot is a unique Telegram bot tailored for interacting w
 ### Ask about the balances of NFT and ERC20s
 <img src="https://github.com/srv-smn/MAHa-Mini-Hackathon-2024/assets/47235134/0af88c11-1e8e-460f-9697-8f5be53cf1dc" width="360" height="606">
 
+### You can do general blockchain conversation also
 
 
 ## Features
@@ -65,3 +66,13 @@ This project is hosted on GitHub and can be run locally by executing `node index
 - `node-telegram-bot-api`
 - `openai`
 
+### Future Scope
+## Future Scope
+
+The possibilities for future development and integration are truly limitless. The strength of our current design allows for seamless integration with an array of other blockchain protocols. This would enable the framework to have a broader understanding of different systems, expanding its repertoire and ability to answer related queries, making it a versatile tool or platform.
+
+Coupled with the potential of adding a moderating role to our system, especially in protocol-specific telegram groups, changes the dynamics entirely. Serving to answer technical queries in real-time and providing immediate assistance, it could elevate the user experience to unprecedented levels.
+
+Moreover, with the incorporation of Reinforcement from Auxiliary Generative (RAG) capabilities, the bot could generate more contextual and precise responses. This amplifies its utility from being a mere response generator to an interactive assistant, always ready to engage in a richer, more meaningful and instructive dialogue regarding blockchain technology. 
+
+While these possibilities open up an entirely new horizon for us to explore, they also hint at how we're only scratching the surface of what's possible. Our journey has only just begun. There's so much more ground to cover, and we're excited about the exciting opportunities that lie ahead.
